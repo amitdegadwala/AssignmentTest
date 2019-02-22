@@ -9,7 +9,7 @@ const router = express.Router();
 
 // Create new blog
 router.post('', function (req, res, next) {
-    console.log('post to create blog');
+    console.log('Post to create blog');
     if (Object.keys(req.body).length === 0) {
         return res.status(400).send('Request body is missing');
     }
@@ -60,7 +60,7 @@ router.post('', function (req, res, next) {
 
 // Get all blog
 router.get('', function (req, res, next) {
-    console.log('call get all blog');
+    console.log('Call get all blog');
     blogModel.find()
         .then(result => {
             res.status(200).send(result);
@@ -72,7 +72,7 @@ router.get('', function (req, res, next) {
 
 // Get blog details
 router.get('/getblog', function (req, res, next) {
-    console.log('get existing blog by id');
+    console.log('Get existing blog by id');
     blogModel.findOne({
             _id: req.query.blogid
         })
@@ -80,7 +80,7 @@ router.get('/getblog', function (req, res, next) {
             if (doc == null) {
                 res.status(500).json({
                     status: "error",
-                    message: "blog not found.",
+                    message: "Blog not found.",
                     data: null
                 })
             } else {
@@ -94,7 +94,7 @@ router.get('/getblog', function (req, res, next) {
 
 // Update existing blog
 router.put('', function (req, res, next) {
-    console.log('put to update existing blog');
+    console.log('Put to update existing blog');
     if (Object.keys(req.body).length === 0) {
         return res.status(400).send('Request body is missing');
     }
@@ -109,7 +109,7 @@ router.put('', function (req, res, next) {
             if (result == null) {
                 res.status(500).json({
                     status: "error",
-                    message: "blog not found.",
+                    message: "Blog not found.",
                     data: null
                 })
             } else {
@@ -134,7 +134,7 @@ router.delete('', (req, res) => {
             if (doc == null) {
                 res.status(500).json({
                     status: "error",
-                    message: "blog not found.",
+                    message: "Blog not found.",
                     data: null
                 })
             } else {

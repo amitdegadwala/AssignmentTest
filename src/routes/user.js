@@ -8,7 +8,7 @@ const router = express.Router();
 
 // Login with user
 router.post('/login', function (req, res, next) {
-    console.log('post to login user');
+    console.log('Post to login user');
     if (Object.keys(req.body).length === 0) {
         return res.status(400).json({
             status: "error",
@@ -72,7 +72,7 @@ router.post('/login', function (req, res, next) {
 
 // Create new user
 router.post('', function (req, res, next) {
-    console.log('post to create user');
+    console.log('Post to create user');
     if (Object.keys(req.body).length === 0) {
         return res.status(400).send('Request body is missing');
     }
@@ -99,7 +99,7 @@ router.use(require('../../tokenChecker'))
 
 // Get all user
 router.get('', function (req, res, next) {
-    console.log('call get all user');
+    console.log('Call get all user');
     userModel.find()
         .then(result => {
             res.status(200).send(result);
@@ -132,7 +132,7 @@ router.get('/getuser', function (req, res, next) {
 
 // Update existing user
 router.put('', function (req, res, next) {
-    console.log('put to update existing user');
+    console.log('Put to update existing user');
     if (Object.keys(req.body).length === 0) {
         return res.status(400).send('Request body is missing');
     }

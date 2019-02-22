@@ -23,7 +23,7 @@ let commentSchema = new mongoose.Schema({
 });
 
 commentSchema.pre('save', function (next) {
-    console.log('commentSchema pre calling');
+    console.log('CommentSchema pre calling');
     var currentDate = new Date();
     this.updateddate = currentDate;
     if (this.createddate == undefined) {

@@ -16,6 +16,12 @@ app.use('/api/user', userRoute);
 let blogRoute = require('./routes/blog');
 app.use('/api/blog', blogRoute);
 
+let commentRoute = require('./routes/comment');
+app.use('/api/comment', commentRoute);
+
+let likeRoute = require('./routes/like');
+app.use('/api/like', likeRoute);
+
 app.use(express.static('public'));
 
 // Normal request

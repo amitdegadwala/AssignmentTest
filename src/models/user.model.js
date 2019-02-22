@@ -20,7 +20,7 @@ let userSchema = new mongoose.Schema({
 });
 
 userSchema.pre('save', function (next) {
-    console.log('userSchema pre calling');
+    console.log('UserSchema pre calling');
     var currentDate = new Date();
     this.updateddate = currentDate;
     if (this.createddate == undefined) {
