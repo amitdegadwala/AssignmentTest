@@ -1,0 +1,7 @@
+{
+    "secret":"abcXYZ",
+    "refreshTokenSecret":"abc123XYZ456",
+    "port":3001,
+    "tokenLife":900,
+    "refreshTokenLife":86400
+}

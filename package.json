@@ -1,0 +1,27 @@
+{
+    "name": "node-training-self",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "dependencies": {
+        "bcrypt": "^3.0.4",
+        "body-parser": "^1.18.3",
+        "express": "^4.16.4",
+        "jsonwebtoken": "^8.4.0",
+        "mongoose": "^5.4.11",
+        "start-watch": "^3.0.0"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.3.3",
+        "@babel/node": "^7.2.2",
+        "@babel/preset-env": "^7.3.1",
+        "nodemon": "^1.18.10"
+    },
+    "scripts": {
+        "start": "nodemon --exec babel-node src/index.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC"
+}
